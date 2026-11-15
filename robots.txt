@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://setukumershaha.vercel.app/sitemap.xml
+Sitemap: https://setukumarshaha.vercel.app/sitemap.xml
