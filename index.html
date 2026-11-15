@@ -6,12 +6,35 @@
   <title>Setu Kumar Shaha | Portfolio - SK Setu Kumar</title>
   <meta name="description" content="Official portfolio of Setu Kumar Shaha (SK Setu Kumar) - Student, Digital Marketer, and Adobe Stock Contributor from Naogaon, Bangladesh.">
   <meta name="keywords" content="setu kumar shaha, sk setu kumar, setu kumar, setu, digital marketer bangladesh, adobe stock contributor, web developer portfolio, student portfolio naogaon">
+  <meta name="author" content="Setu Kumar Shaha">
   <link rel="canonical" href="https://setukumershaha.vercel.app/">
   
   <!-- Open Graph / Social Media Meta Tags -->
   <meta property="og:title" content="Setu Kumar Shaha | Portfolio - SK Setu Kumar">
   <meta property="og:description" content="Explore the official portfolio of Setu Kumar Shaha, showcasing digital marketing, web projects, and Adobe Stock contributions.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://setukumershaha.vercel.app/">
+
+  <!-- Advanced Google SEO Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Setu Kumar Shaha",
+    "alternateName": "SK Setu Kumar",
+    "url": "https://setukumershaha.vercel.app/",
+    "jobTitle": "Digital Marketer & Adobe Stock Contributor",
+    "alumniOf": "Naogaon Government College",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Naogaon",
+      "addressCountry": "Bangladesh"
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/1E8qs7Vwpd/"
+    ]
+  }
+  </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -29,10 +52,10 @@
       --shadow: 0 20px 50px rgba(80,60,10,.12); --nav-bg: rgba(250,247,240,.78);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; width: 100%; overflow-x: hidden; }
     body {
       font-family: 'Hind Siliguri', sans-serif; background: var(--bg); color: var(--text);
-      line-height: 1.7; overflow-x: hidden; transition: background .5s, color .5s;
+      line-height: 1.7; width: 100%; overflow-x: hidden; transition: background .5s, color .5s;
     }
     body:not(.loaded) { overflow: hidden; }
     a { text-decoration: none; color: inherit; }
@@ -116,9 +139,9 @@
       padding: 110px 6% 80px; color: #f4efe6;
       background: radial-gradient(ellipse at 75% 40%, #1a1408 0%, #07070b 65%);
     }
-    .hero .space { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    .hero .space { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
     .hero::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(7,7,11,.94) 0%, rgba(7,7,11,.65) 40%, transparent 72%); }
-    .hero-content { position: relative; z-index: 2; max-width: 640px; }
+    .hero-content { position: relative; z-index: 2; max-width: 640px; width: 100%; }
     .rise { opacity: 0; translate: 0 40px; transition: opacity 1.1s var(--ease) var(--d, 0s), translate 1.1s var(--ease) var(--d, 0s); }
     body.loaded .rise { opacity: 1; translate: 0 0; }
     .eyebrow { color: var(--gold2); letter-spacing: 2px; font-size: 15px; margin-bottom: 8px; }
@@ -231,7 +254,7 @@
     form input:focus, form textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 4px rgba(212,175,55,.15); }
     #formMsg { min-height: 24px; color: var(--gold); font-size: 15px; }
 
-    /* Professional Footer Styles */
+    /* Footer */
     footer { background: var(--bg2); border-top: 1px solid var(--line); padding: 60px 6% 30px; color: var(--muted); }
     .footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; max-width: 1150px; margin: 0 auto 40px; }
     .footer-col h3 { font-size: 22px; color: var(--gold); margin-bottom: 14px; font-family: 'Playfair Display', serif; }
@@ -245,10 +268,26 @@
     #top { position: fixed; right: 25px; bottom: 25px; width: 50px; height: 50px; border-radius: 50%; border: none; background: var(--gold-grad); color: #1a1405; font-size: 18px; cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(20px); transition: opacity .5s, transform .5s var(--ease); z-index: 120; box-shadow: 0 8px 25px rgba(212,175,55,.4); }
     #top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
+    /* Mobile Responsive Fixes for Alignment and Layout */
     @media (max-width: 900px) {
-      .hero { justify-content: center; text-align: center; }
-      .hero::after { background: rgba(7,7,11,.62); }
-      .hero-btns, .socials { justify-content: center; }
+      .hero { 
+        justify-content: center; 
+        text-align: center; 
+        align-items: center;
+        padding: 120px 5% 60px;
+      }
+      .hero-content { 
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-btns, .socials { 
+        justify-content: center; 
+        width: 100%;
+      }
       .two { grid-template-columns: 1fr; }
     }
     @media (max-width: 800px) {
@@ -431,7 +470,7 @@
     </div>
   </section>
 
-  <!-- Professional Footer with Rules, Copyright & Legal Policies -->
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-col">
@@ -475,23 +514,43 @@ document.querySelectorAll('img[data-fb]').forEach(img => {
   if (img.complete && img.naturalWidth === 0) fail();
 });
 
-/* ===== Preloader ===== */
+/* ===== Preloader with Fail-safe (Ensures it never gets stuck) ===== */
 (function () {
   const loader = document.getElementById('loader');
+  if (!loader) return;
   const bar = loader.querySelector('.loader-line span');
   const cnt = loader.querySelector('.loader-count');
   let p = 0;
+
+  const finishLoading = () => {
+    p = 100;
+    if (bar) bar.style.width = '100%';
+    if (cnt) cnt.textContent = '100%';
+    loader.classList.add('done');
+    body.classList.add('loaded');
+    setTimeout(() => loader.remove(), 1300);
+  };
+
   const iv = setInterval(() => {
-    p += Math.random() * 9 + 3;
+    p += Math.random() * 15 + 5;
     if (p >= 100) {
-      p = 100; clearInterval(iv);
-      setTimeout(() => {
-        loader.classList.add('done'); body.classList.add('loaded');
-        setTimeout(() => loader.remove(), 1300);
-      }, 300);
+      clearInterval(iv);
+      finishLoading();
+    } else {
+      if (bar) bar.style.width = p + '%';
+      if (cnt) cnt.textContent = Math.floor(p) + '%';
     }
-    bar.style.width = p + '%'; cnt.textContent = Math.floor(p) + '%';
-  }, 90);
+  }, 60);
+
+  // Absolute fallback so it never gets stuck on mobile devices
+  window.addEventListener('load', () => {
+    clearInterval(iv);
+    finishLoading();
+  });
+  setTimeout(() => {
+    clearInterval(iv);
+    finishLoading();
+  }, 3000);
 })();
 
 /* ===== Theme ===== */
@@ -700,7 +759,7 @@ form.addEventListener('submit', async e => {
         let p2 = devices[j];
         let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
         if (dist < 150) {
-          ctx.strokeStyle = `rgba(212, 175, 55, ${0.25 * (1 - dist / 150)})`;
+          ctx.styleStroke = `rgba(212, 175, 55, ${0.25 * (1 - dist / 150)})`;
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
